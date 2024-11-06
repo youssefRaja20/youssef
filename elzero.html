@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Launcher</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+        .app img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .app span {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-grid">
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/adobe-acrobat--v1.png" alt="Adobe Acrobat">
+            <span>Adobe Acrobat</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/google-docs.png" alt="Docs">
+            <span>Docs</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/google-sheets.png" alt="Sheets">
+            <span>Feuilles de calcul</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/gmail--v1.png" alt="Gmail">
+            <span>Gmail</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/google-slides.png" alt="Slides">
+            <span>Slides</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/spotify.png" alt="Spotify">
+            <span>Spotify</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/trello.png" alt="Trello">
+            <span>Trello</span>
+        </a>
+        <a href="#" class="app">
+            <img src="https://img.icons8.com/color/96/000000/google-drive--v2.png" alt="Google Drive">
+            <span>Google Drive</span>
+        </a>
+    </div>
+</body>
+</html>

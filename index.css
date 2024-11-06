@@ -1,0 +1,18 @@
+/* target all paraghraphs
+
+*/
+
+.special {
+    color: red;
+    font-size: 40px;
+}
+
+p {
+color: green;
+font-size: 30px;
+}
+
+#tu {
+    color: blue;
+    font-size: 50px;
+}
