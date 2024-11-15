@@ -19,6 +19,45 @@ HEADER{
     padding: 10px 200px;
 }
 
+
+
+
+/* Hide the menu on mobile screens by default */
+.burger {
+    display: none; /* Hide the burger button */
+    cursor: pointer;
+    font-size: 30px; /* Make the icon bigger */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .navigation {
+        display: none; /* Hide the menu by default on small screens */
+        width: 100%; /* Make sure it fills the screen */
+        background-color: #333; /* Dark background for the menu */
+        padding: 20px; /* Add space around the links */
+    }
+
+    .burger {
+        display: block; /* Show the burger button on mobile */
+    }
+
+    .navigation a {
+        display: block; /* Stack the menu items vertically */
+        margin: 10px 0; /* Add space between menu items */
+        color: white; /* Change link color */
+    }
+}
+
+/* When the menu is active (shown) */
+.navigation.active {
+    display: block; /* Show the menu */
+}
+
+
+
+
+
 .youssef {
     width: 150px;
     height: 150px;
