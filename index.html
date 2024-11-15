@@ -11,16 +11,18 @@
 <body>
     <HEADER>
         <a href="#" class="logo">youssef</a>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i> <!-- This is the burger icon -->
+        </div>
         <nav class="navigation">
            <a href="#services">Services</a>
            <a href="#projects">Projects</a>
            <a href="HEY.html">Contact</a>
            <a href="#contact">Infos</a>
            <a href="#my_cv" onclick="loadCV()">My CV</a>
-
         </nav>
+        
     </HEADER>
-
     <section class="main">
        <div>
         <img class="youssef" src="https://hips.hearstapps.com/hmg-prod/images/eminem-a-k-a-marshall-bruce-mathers-iii-attends-a-ceremony-news-photo-1698936282.jpg?crop=1.00xw:0.667xh;0,0.0380xh&resize=980:*" alt="">
@@ -182,6 +184,13 @@
             cvFrame.src = 'CV.html'; // Path to your CV file
             cvSection.style.display = 'block'; // Make the section visible
             window.scrollTo(0, cvSection.offsetTop); // Scroll to the CV section
+        }
+    </script>
+    
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('active'); // This shows or hides the menu when the burger is clicked
         }
     </script>
     
