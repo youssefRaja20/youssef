@@ -3,72 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CV.css">
-  <title>my cv </title>
+  <title>My CV</title>
 </head>
 <body>
 
-  <div class="kolchi">
-     
-
+  <div class="cv-container">
     <div class="left">
-
-      <div><img src="https://hips.hearstapps.com/hmg-prod/images/eminem-a-k-a-marshall-bruce-mathers-iii-attends-a-ceremony-news-photo-1698936282.jpg?crop=1.00xw:0.667xh;0,0.0380xh&resize=980:*" alt="eminem not afraid"></div>
-      
-      <div class="EDUCATION">
-        <h1>education</h1>
-        <section>
-          <h3>baccalauriat</h3>
-          <p>sep 2022 - JUL 2023</p>
-          <p>lycee jaafar elfaci elfihri</p>
-        </section>
-
-        <section>
-          <h3>apree le baccalauriat</h3>
-          <p>sep 2024</p>
-          <p>ofppt hassania Devlopement Digital</p>
-        </section>
-        <section >
-        <h1>references</h1>
-        <p><b>name :</b><br> youssef bouttair</p>
-          <p>stagiare a l'ofppt</p>
-        <p><b>email : </b><br>youssefraja@gmail.com</p>  
-        <p><b>mobile: </b><br>+212 0639428918</p>
-      </section>
+      <div class="profile-picture">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/eminem-a-k-a-marshall-bruce-mathers-iii-attends-a-ceremony-news-photo-1698936282.jpg?crop=1.00xw:0.667xh;0,0.0380xh&resize=980:*" alt="Profile Picture">
       </div>
-    
-    </div>
+      
+      <div class="education">
+        <h2>Education</h2>
+        <section>
+          <h3>Baccalaureate</h3>
+          <p>Sep 2022 - Jul 2023</p>
+          <p>Lycée Jaafar Elfaci Elfihri</p>
+        </section>
+        <section>
+          <h3>Post-Baccalaureate</h3>
+          <p>Sep 2024</p>
+          <p>OFPPT Hassania - Digital Development</p>
+        </section>
+      </div>
 
+      <div class="contact">
+        <h2>Contact Info</h2>
+        <p><strong>Name:</strong> Youssef Bouttair</p>
+        <p><strong>Email:</strong> youssefraja@gmail.com</p>
+        <p><strong>Mobile:</strong> +212 0639428918</p>
+      </div>
+    </div>
 
     <div class="right">
       <div class="about-me">
-        <h1>youssef bouttair</h1>
-        <h3>stagiare a l'ofppt</h3>
-        <h3>about me </h3>
-        <p>je suis youssef bouttair j'etude devlopment Digital a l'ofppt hassania</p>
-            
-        <h3>work EXPERIENCE </h3>
+        <h1>Youssef Bouttair</h1>
+        <h3>Intern at OFPPT</h3>
+        <p>I am a student in Digital Development at OFPPT Hassania, passionate about web development and video editing.</p>
+        
+        <h3>Work Experience</h3>
         <section>
-          <h4>Web developer</h4>
-          <p>i study web developement i'm able to write code in
-            html and css and some of python .
-            jul 2024 - oct 2024</p>
+          <h4>Web Developer</h4>
+          <p>Jul 2024 - Oct 2024</p>
+          <p>I have been learning web development with a focus on HTML, CSS, and Python.</p>
         </section>
         <section>
-          <h4>Editor</h4>
-          <p>I edited a lot of videos ealier with capcut and divinci
-            resolve , i edit also photos with both photoshop and canva and i was making vidios in instagram and youtube
-            nev 2021 - Dec 2023</p>
+          <h4>Video Editor</h4>
+          <p>Nov 2021 - Dec 2023</p>
+          <p>I have edited videos using CapCut and DaVinci Resolve, as well as created content for Instagram and YouTube.</p>
         </section>
       </div>
-      <div class="SKILLS">
-        <h3>SKILLS</h3>
-        <P>HTML / CSS / python
 
-          video editing / photos editing / video creating</P>
+      <div class="skills">
+        <h3>Skills</h3>
+        <p>HTML, CSS, Python, Video Editing, Photo Editing, Content Creation</p>
       </div>
-
     </div>
   </div>
+
+  <!-- Add the CSS styles here -->
+  <style>
+    /* General reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .cv-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px auto;
+      max-width: 1200px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    /* Left Section */
+    .left {
+      flex: 1;
+      background-color: #ffeb3b; /* Yellow background color */
+      padding: 20px;
+      box-sizing: border-box;
+      margin-right: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center all content */
+      justify-content: center;
+    }
+
+    .profile-picture img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #007BFF;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    section h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    section p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    /* Right Section */
+    .right {
+      flex: 2;
+      padding: 20px;
+    }
+
+    .right h1 {
+      color: #007BFF;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .right h3 {
+      font-size: 1.4rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .right p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      margin-top: 20px;
+    }
+
+    .skills h3 {
+      font-size: 1.3rem;
+      color: #007BFF;
+    }
+
+    .skills p {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cv-container {
+        flex-direction: column;
+      }
+
+      .left,
+      .right {
+        flex: 1;
+        padding: 15px;
+        margin-right: 0;
+      }
+
+      .profile-picture img {
+        max-width: 200px;
+      }
+
+      h2, h3, h4 {
+        font-size: 1.2rem;
+      }
+
+      section p {
+        font-size: 0.9rem;
+      }
+
+      .right h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cv-container {
+        padding: 10px;
+      }
+
+      .profile-picture img {
+        max-width: 150px;
+      }
+
+      .left,
+      .right {
+        padding: 10px;
+      }
+    }
+  </style>
+
 </body>
 </html>
