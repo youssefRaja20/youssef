@@ -14,10 +14,13 @@
         <nav class="navigation">
            <a href="#services">Services</a>
            <a href="#projects">Projects</a>
-           <a href="#contact">Contact</a>
-           <a target="_blank" href="CV.html">My cv</a>
+           <a href="HEY.html">Contact</a>
+           <a href="#contact">Infos</a>
+           <a href="#my_cv" onclick="loadCV()">My CV</a>
+
         </nav>
     </HEADER>
+
     <section class="main">
        <div>
         <img class="youssef" src="https://hips.hearstapps.com/hmg-prod/images/eminem-a-k-a-marshall-bruce-mathers-iii-attends-a-ceremony-news-photo-1698936282.jpg?crop=1.00xw:0.667xh;0,0.0380xh&resize=980:*" alt="">
@@ -127,6 +130,17 @@
 </div>
     </section>
 
+    <section id="cv-section" style="display: none; margin-top: 20px; text-align: center;">
+        <h2 class="title">My CV</h2>
+        <iframe id="cv-frame" style="width: 100%; height: 70vh; border: 1px solid #ddd; border-radius: 5px;"></iframe>
+
+        <a href="CV.html" download style="display: inline-block; margin: 15px auto; padding: 10px 15px; background: #007BFF; color: #fff; text-decoration: none; border-radius: 5px;">
+            Download CV
+        </a>
+        
+    </section>
+    
+
 
     <section class="cards-contact" id="contact">
         <h2 class="title">Let's work together</h2>
@@ -140,7 +154,6 @@
                      <p>0639428918</p>
                 </div>
             </div>
-
             <div class="card">
                 <div class="icon">
                     <i class="fa-solid fa-envelope"></i>
@@ -160,5 +173,18 @@
             <a target="_blank" href="https://x.com/home"><i class="fa-brands fa-x-twitter"></i></a>
        </div>
     </footer>
+
+    <script>
+        function loadCV() {
+            const cvSection = document.getElementById('cv-section');
+            const cvFrame = document.getElementById('cv-frame');
+    
+            cvFrame.src = 'CV.html'; // Path to your CV file
+            cvSection.style.display = 'block'; // Make the section visible
+            window.scrollTo(0, cvSection.offsetTop); // Scroll to the CV section
+        }
+    </script>
+    
+    
 </body>
 </html>
