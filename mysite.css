@@ -19,15 +19,29 @@ HEADER{
     padding: 10px 200px;
 }
 
+.navbar {
+    background-color: blue !important; /* Set the background color to blue */
+    width: 100%; /* Ensure it spans the full width */
+    position: fixed; /* Keep it fixed at the top if needed */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+body {
+    margin: 0; /* Remove default margins */
+    padding: 0;
+}
 
 
 
 /* Hide the menu on mobile screens by default */
-.burger {
-    display: none; /* Hide the burger button */
+/* .burger {
+    display: none; 
     cursor: pointer;
-    font-size: 30px; /* Make the icon bigger */
-}
+    font-size: 30px; 
+} */
+
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
@@ -258,6 +272,89 @@ section{
 .cards-contact .card .icon{
     font-size: 5em;
 }
+
+
+/* For the Contact section */
+#contact {
+    display: none;  /* Hidden by default */
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the container */
+.cont {
+    background-color: aliceblue;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for form fields */
+.pye {
+    padding-bottom: 30px;
+}
+
+/* Input and textarea styles */
+.hey, .adam {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: 1px solid rgb(46, 155, 228);
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+/* Add hover effect for inputs */
+.hey:hover, .adam:hover {
+    border-color: aqua;
+}
+
+/* Button style */
+.buttom {
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: rgb(46, 155, 228);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.buttom:hover {
+    background-color: aqua;
+}
+
+/* Header styling */
+h1 {
+    font-size: 24px;
+    text-align: center;
+    color: rgb(46, 155, 228);
+}
+
+/* Responsive design - Ensure the form is centered and adjusts well on small screens */
+@media screen and (max-width: 768px) {
+    .cont {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .hey, .adam {
+        width: 90%;
+    }
+}
+
+
 
 .footer{
     background-color: #000016;
