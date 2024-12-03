@@ -174,7 +174,7 @@
             localStorage.setItem('score', JSON.stringify(score));
 
             document.getElementById('paragraph2').innerHTML = `${result}.`
-            document.getElementById('paragraph3').innerHTML = `you pick <img src="images/${playerMove}-emoji.png"> Computer picked <img src="images/${computerChoice}-emoji.png">.`
+            document.getElementById('paragraph3').innerHTML = `you pick <img src="${playerMove}-emoji.png"> Computer picked <img src="${computerChoice}-emoji.png">.`
             document.getElementById('paragraph').innerHTML = `wins : ${score.wins} , losses : ${score.losses} , ties : ${score.ties}`
      
    
