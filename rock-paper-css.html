@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-css</title>
+</head>
+<body>
+
+    <STYLE>
+        BODY{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        img{
+            height: 60px;
+        }
+        .button-img{
+            background-color: transparent;
+            border: none;
+            border: SOLID 3px WHITE;
+            padding: 30px;
+            border-radius: 100px;
+            margin-right: 10px;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+
+        .button-score{
+            padding: 8px 15px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #paragraph2{
+            font-SIZE: 25PX;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        #paragraph3{
+            margin-bottom: 60px;
+        }
+        
+
+    </STYLE>
+    
+    <p class="title">Rock Paper Scissors</p>
+
+    <button class="button-img" onclick="
+    playGame('Rock')
+   "><img src="images/rock-emoji.png"></button>
+
+
+    <button class="button-img" onclick="
+    playGame('Paper')
+    "><img src="images/paper-emoji.png">
+    
+    <button class="button-img" onclick="
+    playGame('Scissors');
+    "><img src="images/scissors-emoji.png" alt=""></button>
+
+    <p id="paragraph2"></p>
+    <p id="paragraph3"></p>
+    <p id="paragraph"></p>
+
+    
+    <button class="button-score" onclick="
+    score.wins = 0
+    score.losses = 0
+    score.ties = 0
+    localStorage.removeItem('score');
+    document.getElementById('paragraph').innerHTML = `wins : ${score.wins} , losses : ${score.losses} , ties : ${score.ties}`
+    ">
+        Reset Score
+    </button>
+    <script>
+
+        let score = JSON.parse(localStorage.getItem('score')) ;
+
+        if(!score){
+            score = {
+                wins: 0,
+                losses: 0,
+                ties : 0
+            };
+        }
+        
+
+
+        document.getElementById('paragraph').innerHTML = `wins : ${score.wins} , losses : ${score.losses} , ties : ${score.ties}`;
+
+
+        let computerChoice = '';
+        
+        function pickComputermove(){
+            const randomNumber = Math.random();
+
+            if(randomNumber >= 0 && randomNumber < 1 / 3){
+                computerChoice = 'Rock';
+            } else if (randomNumber >= 1 / 3 && randomNumber < 2/3){
+                computerChoice = 'Paper';
+            } else{
+                computerChoice ='Scissors';
+            }
+
+            return 'rock';
+
+        }
+
+        function playGame (playerMove){
+            pickComputermove();
+        
+            let result = '';
+
+            if (playerMove === 'Scissors'){
+
+                if(computerChoice === 'Rock'){
+                result = 'you lose'
+            } else if (computerChoice === 'Paper'){
+                result = 'you win'
+            } else if (computerChoice === 'Scissors'){
+                result  = 'tie'
+            }
+
+            } 
+
+            
+            else if (playerMove === 'Rock'){
+
+                if(computerChoice === 'Rock'){
+                result = 'tie'
+            } else if (computerChoice === 'Paper'){
+                result = 'you lose'
+            } else if (computerChoice === 'Scissors'){
+                result  = 'you win'
+            }
+
+            } 
+            
+
+            else if (playerMove ==='Paper'){
+
+                if(computerChoice === 'Rock'){
+                result = 'you win'
+            } else if (computerChoice === 'Paper'){
+                result = 'tie'
+            } else if (computerChoice === 'Scissors'){
+                result  = 'you lose'
+            }
+
+            }
+
+
+
+            if (result === 'you win'){
+            score.wins += 1; 
+            }
+            else if (result === 'you lose'){
+            score.losses += 1 ;
+            }
+            else if (result  === 'tie'){
+            score.ties += 1 ;
+            }
+
+            localStorage.setItem('score', JSON.stringify(score));
+
+            document.getElementById('paragraph2').innerHTML = `${result}.`
+            document.getElementById('paragraph3').innerHTML = `you pick <img src="images/${playerMove}-emoji.png"> Computer picked <img src="images/${computerChoice}-emoji.png">.`
+            document.getElementById('paragraph').innerHTML = `wins : ${score.wins} , losses : ${score.losses} , ties : ${score.ties}`
+     
+   
+        }
+    </script>
+</body>
+</html>
